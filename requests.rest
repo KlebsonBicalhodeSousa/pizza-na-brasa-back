@@ -1,0 +1,140 @@
+### Ping
+GET http://localhost:3003/api/ping
+
+### Criar usuário
+# @name signup
+Post http://localhost:3003/api/user/signup
+Content-Type: application/json
+
+{
+  "name": "Cicrano Show",
+  "email": "cicrano@gmail.com",
+  "cpf": "222.222.222-22",
+  "password": "123456"
+}
+
+### Cadastrar ou editar endereço
+@token1 = {{signup.response.body.token}}
+Put http://localhost:3003/api/user/address
+Content-Type: application/json
+Authorization: {{token1}}
+
+{
+    "street": "R. Afonso Braz",
+    "number": "177",
+    "neighbourhood": "Vila N. Conceição",
+    "city": "São Paulo",
+    "state": "SP",
+    "complement": "72"
+}
+
+###
+# login do usuário
+# @name login
+POST http://localhost:3003/api/user/login
+Content-Type: application/json
+
+{
+  "email": "cicrano@gmail.com",
+  "password": "123456"
+}
+
+### Get User
+@token = {{login.response.body.token}}
+GET http://localhost:3003/api/user
+Authorization: {{token}}
+
+### Editar usuário
+Put http://localhost:3003/api/user
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+  "name": "Cicrano Show",
+  "email": "cicrano@gmail.com",
+  "cpf": "222.222.222-22"
+}
+
+### Get Address
+Get http://localhost:3003/api/user/address
+Authorization: {{token}}
+
+### Get Pizzas
+GET http://localhost:3003/api/pizzas
+# Authorization: {{token}}
+
+### Get Ingredientes
+GET http://localhost:3003/api/pizzas/ingredients
+
+### Inserir pizzas disponíveis
+POST http://localhost:3003/api/pizzas/insert
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+  "name": "Brigadeiro",
+  "price": 24.90,
+  "imageUrl": "https://i.postimg.cc/bYG9NCCp/pizza-Brigadeiro1.jpg"
+}
+
+### Inserir ingredientes disponíveis
+POST http://localhost:3003/api/pizzas/insert-ingredinets
+Content-Type: application/json
+Authorization: {{token}}
+
+{    
+    "ingredientName": "chocolate amargo"
+}
+
+### Inserir pizzas no menu
+POST http://localhost:3003/api/pizzas/insert-menu
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+  "name": "Brigadeiro",
+  "price": 24.90,
+  "imageUrl": "https://i.postimg.cc/bYG9NCCp/pizza-Brigadeiro1.jpg",
+  "ingredients":[
+    {
+      "name": "chocolate"
+    },
+    {
+      "name": "trufas"
+    }
+  ]
+}
+
+### Deletar pizza
+DELETE  http://localhost:3003/api/pizzas/delete
+Content-Type: application/json
+
+{
+  "name": "Brigadeiro"
+}
+
+### Get Pizzas do menu
+GET http://localhost:3003/api/pizzas/menu
+
+### Create order
+Post http://localhost:3003/api/orders/create
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+  "pizzas":[
+    {
+        "name":"Alla Moda",
+        "quantity": 5
+    }, 
+    {
+        "name":"Calabreza",
+        "quantity": 2
+    } 
+   ],
+   "paymentMethod": "pix"
+}
+
+### Get Orders
+GET http://localhost:3003/api/orders
+Authorization: {{token}}
