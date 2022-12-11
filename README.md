@@ -35,7 +35,7 @@ O sistema foi criado com Typescript(JS e Node.js)
 - Os endpoints foram criados para as requisições onde são ligados ao banco de dados mysql, onde são salvos os dados do cliente.
   
 ## 🔗Link API
-
+- https://documenter.getpostman.com/view/21554008/2s8YzTU31s
 
 ## 🛠Tecnologias Utilizadas
 <div style="display: inline_block">  
