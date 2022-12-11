@@ -1,4 +1,7 @@
-## 🚀 Descrição do Projeto
+<h2 align="center">🍕 Projeto Pizza na Brasa 🍕</h2>
+
+[🔗Deploy](#link-deploy) | [🛠️Tecnologias](#tecnologias-utilizadas)
+
 Esse é um case de teste da Shopper.com.br
 criado para avaliar meus conhecimentos sobre desenvolvimento de software. 
 A proposta é criar um formulário simples de cadastro de pedidos de supermercado.
@@ -40,7 +43,7 @@ http://ec2-44-210-91-174.compute-1.amazonaws.com:3000
 - No back-end foram criados endpoints para as requisições onde são ligados ao banco de dados mysql, onde são salvos os dado do cliente. Os endpoints podem ser acessados pelo link da API:
 https://documenter.getpostman.com/view/21554008/2s84Dst1nj
 
-### Tecnologias usadas:
+## 🛠Tecnologias Utilizadas
 <div style="display: inline_block">  
   <img aline="center" width="100px" height="45px" alt="API REST" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmJoxiAXVIxedd5WnxL3yepJpACK2lmCSl9w&usqp=CAU" />  
   <img aline="center" width="100px" height="45px" alt="TYPESCRIPT" src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
@@ -48,6 +51,9 @@ https://documenter.getpostman.com/view/21554008/2s84Dst1nj
   <img aline="center" width="100px" height="45px" alt="EXPRESS.JS" src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge" />  
   <img aline="center" width="100px" height="45px" alt="MYSQL" src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white" />
 </div>
+
+## 🔗Link Deploy
+- https://pizza-na-brasa.vercel.app/
 
 ## ✒️ Autor
 
