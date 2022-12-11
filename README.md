@@ -53,7 +53,7 @@ https://documenter.getpostman.com/view/21554008/2s84Dst1nj
 </div>
 
 ## 🔗Link Deploy
-- https://pizza-na-brasa.vercel.app/
+- https://backend-pizza-na-brasa.onrender.com
 
 ## ✒️ Autor
 
