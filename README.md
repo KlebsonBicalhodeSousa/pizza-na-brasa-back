@@ -42,7 +42,7 @@ https://documenter.getpostman.com/view/21554008/2s84Dst1nj
 
 ### Tecnologias usadas:
 <div style="display: inline_block">  
-  <img aline="center" width="100px" height="45px" alt="API REST" src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fuxwing.com%2Fwp-content%2Fthemes%2Fuxwing%2Fdownload%2Fweb-app-development%2Frest-api-icon.svg&imgrefurl=https%3A%2F%2Fuxwing.com%2Frest-api-icon%2F&tbnid=gl-FFFCwDuRYHM&vet=12ahUKEwjfgdLEp_D7AhWqA7kGHSYHC9YQMygAegUIARC7AQ..i&docid=jG9snsDa9X_UVM&w=800&h=656&q=symbol%20rest%20api&ved=2ahUKEwjfgdLEp_D7AhWqA7kGHSYHC9YQMygAegUIARC7AQ" />  
+  <img aline="center" width="100px" height="45px" alt="API REST" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmJoxiAXVIxedd5WnxL3yepJpACK2lmCSl9w&usqp=CAU" />  
   <img aline="center" width="100px" height="45px" alt="TYPESCRIPT" src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
   <img aline="center" width="100px" height="45px" alt="NODE.JS" src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" />
   <img aline="center" width="100px" height="45px" alt="EXPRESS.JS" src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge" />  
