@@ -84,7 +84,7 @@ export class PizzaBusiness {
 
     if (payload.role !== USER_ROLES.ADMIN) {
       throw new ConflictError(
-        "Somente administradores podem adicionar pizzas!"
+        "Somente administradores podem adicionar pizzas no painel!"
       );
     }
 
@@ -132,14 +132,14 @@ export class PizzaBusiness {
 
     if (payload.role !== USER_ROLES.ADMIN) {
       throw new ConflictError(
-        "Somente administradores podem adicionar pizzas!"
+        "Somente administradores podem adicionar pizzas no menu!"
       );
     }
 
     const pizzaDB = await this.pizzaDatabase.getPizzabyName(name);
 
     if (!pizzaDB) {
-      throw new NotFoundError("Esta pizza não existe no cardápio!");
+      throw new NotFoundError("Esta pizza não existe no painel do admin!");
     }
 
     const pizza: IPizzaDB = {

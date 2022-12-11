@@ -101,13 +101,13 @@ export class PizzaDatabase extends BaseDatabase {
             .connection(PizzaDatabase.TABLE_PIZZAS_INGREDIENTS)
             .delete()
             .where({pizza_name})
-            .andWhere({})
+            // .andWhere({})
     }
     public deletePizza = async (name: string): Promise<void> => {
         await BaseDatabase
             .connection(PizzaDatabase.TABLE_PIZZAS)
             .delete()
             .where({name})
-            .andWhere({})
+            // .andWhere({})
     }
 }

@@ -104,57 +104,7 @@ export class OrderBusiness {
     }
 
     return response
-  }
-
-  public getAllOrders = async (): Promise<IGetOrdersOutputDTO> => {
-
-      
-    const ordersDB = await this.orderDatabase.getAllOrders()
-
-    
-    const orders: Order[] = []
-    
-    for (let orderDB of ordersDB) {
-          const userDB = await this.userDatabase.findUserById(orderDB.id);
-            const order = new Order(
-                    orderDB.id,
-                    userDB.name,
-                    orderDB.paymentMethod,
-                    []
-                )
-            const orderItemsDB: any = await 
-            this.orderDatabase.getOrderItem(order.getId())
-
-            for (let orderItemDB of orderItemsDB) {
-              const price = await this.orderDatabase.getPrice(orderItemDB.pizza_name)
-
-              orderItemDB.price = price
-            }
-               
-            order.setOrderItems(orderItemsDB)
-
-            orders.push(order)
-        }
-        if (orders.length === 0) {
-          throw new NotFoundError("Não existe pedido")
-        }
-
-        const response: IGetOrdersOutputDTO = {
-            orders: orders.map((order) => ({
-                id: order.getId(),
-                userName: order.getUser(),
-                pizzas: order.getOrderItems().map((item) => ({
-                  name: item.pizza_name,
-                  quantity: item.quantity,
-                  price: item.price,
-                })),
-                paymentMethod: order.getPaymentMethod(),
-                total: order.getTotal()
-            }))
-        }
-
-        return response
-  }
+  }  
   
   public getOrders = async (input: IGetOrderInputDTO) => {
 
@@ -175,7 +125,7 @@ export class OrderBusiness {
 
     console.log(ordersDB)
 
-    if (!ordersDB) {
+    if (ordersDB.length === 0) {
       throw new NotFoundError("Ainda não fez nenhum pedido")
     }
     
