@@ -1,46 +1,40 @@
 <h2 align="center">🍕 Projeto Pizza na Brasa 🍕</h2>
 
-[🔗Deploy](#link-deploy) | [🛠️Tecnologias](#tecnologias-utilizadas)
+Este projeto é uma API criada para um site de delivery consumida no front-end fazendo a ligação com o banco de dados.
 
-Esse é um case de teste da Shopper.com.br
-criado para avaliar meus conhecimentos sobre desenvolvimento de software. 
-A proposta é criar um formulário simples de cadastro de pedidos de supermercado.
-Junto desse documento recebi um arquivo products.csv , que é uma lista com produtos 
-disponíveis e seus respectivos preços e estoque com as seguintes definições:
-- id = id do produto
-- name = nome do produto
-- price = preço do produto em reais. 
-- qty_stock = quantidade em estoque
-## 📋 Funcionalidades
-### Abaixo estão os requisitos que o sistema deve atender:
-1- O sistema deve ter um formulário de cadastro de pedidos
+O sistema foi criado com Typescript(JS e Node.js)
 
-2- O usuário deve entrar com Nome do Cliente, Data de Entrega e uma lista de compras 
+[🔗Deploy](#link-deploy) | [🔗API](#link-api) | [🛠️Tecnologias](#tecnologias-utilizadas)
 
-3- A lista de compras é composta por um ou mais produtos e a quantidade solicitada para 
-cada um deles.
+<h2>📋 Funcionalidades</h2  
 
-4- O usuário pode alterar a quantidade de itens já cadastrados ou excluir um item que ele 
-não queira mais. 
+1- Endpoint de cadastro de usuário
 
-5- A cada alteração na lista de compras o sistema deve calcular o valor total do pedido.
+2- Endpoint de cadastrar ou editar endereço de usuário
 
-6- Todas essas informações devem ser salvas em um banco de dados que você vai modelar.
+3- Endpoint de login
 
-7- Cada pedido salvo deve debitar a quantidade do produto correspondente de seu estoque.
+4- Endpoint de pegar usuário. 
 
-8- O sistema deve alertar o usuário caso a quantidade solicitada não esteja disponível no 
-estoque.
+5- Endpoint de pegar pizzas. 
 
-9- O sistema também deve ter uma função para mostrar o estoque atual exibindo: Nome do 
-produto e a quantidade em estoque.
+6- Endpoint de pegar ingredientes. 
 
-No front-end o cliente cria um pequeno cadastro com o nome e data de entrega, onde é gerado um id que é salvo no local storage.
-- Após o cadastro ele é direcionado para página de compras onde pode adicionar o produto que deseja quantas vezes quiser, dependendo da quantidade em estoque.
-É possível visualizar os produtos adicionados ao carrinho com os preços de total da compra, também excluir algum produto em que adicionou demais ou erradamente. O aplicativo pode ser acessado pelo link:
-http://ec2-44-210-91-174.compute-1.amazonaws.com:3000
+7- Endpoint de inserir pizzas disponíveis no painel do adimin. 
 
-- No back-end foram criados endpoints para as requisições onde são ligados ao banco de dados mysql, onde são salvos os dado do cliente. Os endpoints podem ser acessados pelo link da API:
+8- Endpoint de inserir ingredientes disponíveis no painel do adimin.
+
+9- Endpoint de inserir pizzas no menu.
+  
+10- Endpoint de deletar pizzas.
+
+11- Endpoint de criar ordem de compra.
+  
+12- Endpoint de pegar ordem.
+
+- Os endpoints foram criados para as requisições onde são ligados ao banco de dados mysql, onde são salvos os dados do cliente.
+  
+## 🔗Link API
 https://documenter.getpostman.com/view/21554008/2s84Dst1nj
 
 ## 🛠Tecnologias Utilizadas
